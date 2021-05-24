@@ -5,7 +5,7 @@ def solution(number):
         current = i
         temp = count
         while current != 0:
-            if current % 10 == 3 or current % 10 == 6 or current % 10 == 9:
+            if current % 10 % 3 == 0 and current % 10 != 0:
                 count += 1
             current = current // 10
     return count
