@@ -1,6 +1,7 @@
 def solution(absolutes, signs):
     answer = 0
-    for i in range(3):
+    # 넘겨받는 배열(list)의 길이를 일반화 시킴 len(absolutes)
+    for i in range(len(absolutes)):
         if signs[i] == True:
             answer += absolutes[i]
         else:
