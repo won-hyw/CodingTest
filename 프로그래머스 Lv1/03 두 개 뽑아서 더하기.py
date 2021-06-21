@@ -6,7 +6,17 @@ numbers에서 서로 다른 인덱스에 있는 두 개의 수를 뽑아 더해�
 
 
 def solution(numbers):
-    answer = []
+    answer = list()
+    # numbers[i]는 첫 번째로 뽑은 숫자
+    # numbers[j]는 두 번째로 뽑은 숫자
+    for i in range(3):
+        for j in range(i+1, 4):
+            # 두 수를 뽑아 더한 값이 기존에 존재하지 않을 때
+            if (numbers[i] + numbers[j]) not in answer:
+                # list에 추가
+                answer.append(numbers[i] + numbers[j])
+    # 오름차순으로 정렬
+    answer.sort()
     return answer
 
 
